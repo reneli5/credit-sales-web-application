@@ -24,14 +24,13 @@ jobs:
     steps:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v3
-      - uses: actions/setup-node@v3
-        with:
-          node_version: '14'    
-      # Runs node install dependencies
-      - name: Run npm install
-        run: npm install
+
+      # Runs a single command using the runners shell
+      - name: Run a one-line script
+        run: echo Hello, world!
 
       # Runs a set of commands using the runners shell
-      - name: Run test
+      - name: Run a multi-line script
         run: |
-          npm run unit-test
+          echo Add other actions to build,
+          echo test, and deploy your project.

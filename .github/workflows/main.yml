@@ -51,6 +51,6 @@ jobs:
         uses: docker/build-push-action@v3
         with:
           push: true
-          tags: proxytechnology/credit-sales-web-application:$(date +%s)
+          tags: proxytechnology/credit-sales-web-application:latest
      
   

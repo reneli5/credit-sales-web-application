@@ -35,11 +35,7 @@ jobs:
       - name: Run test
         run: |
           npm run unit-test
-  docker:
-    runs-on: ubuntu-latest
-    steps:
-      -
-        name: Set up QEMU
+      - name: Set up QEMU
         uses: docker/setup-qemu-action@v2
       -
         name: Set up Docker Buildx
@@ -56,4 +52,5 @@ jobs:
         with:
           push: true
           tags: proxytechnology/credit-sales-web-application:$(date +%s)
+     
   

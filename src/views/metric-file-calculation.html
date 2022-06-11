@@ -1,0 +1,39 @@
+{% from "defra-creditsales-form.njk" import creditSalesForm %}
+{% extends 'layout.html' %}
+
+{% set pageHeading = "Check the habitat for the data for the credits matches the calculation" %}
+
+{% block content %}
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      <h1 class="govuk-heading-xl">{{ pageHeading }}</h1>
+      <p class="gem-c-lead-paragraph">
+        The data has been taken directly from the uploaded developer Biodiversity Metric 3.0 calculation.
+      </p>
+      {{ govukTable({
+        captionClasses: "govuk-table__caption--m",
+        firstCellIsHeader: false,
+        head: [
+          {
+            text: "Habitat type"
+          },
+          {
+            text: "Area (ha)"
+          },
+          {
+            text: "Condition"
+          },
+          {
+            text: "Biodiversity units needed"
+          }
+        ],
+        rows: habitatData
+      }) }}
+      {{ govukButton({
+        text: "Continue",
+        type: "submit",
+        classes: "govuk-!-margin-top-2 govuk-!-margin-bottom-8"
+      }) }}
+    </div>
+  </div>
+{% endblock %}

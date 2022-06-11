@@ -1,0 +1,55 @@
+{% from "defra-creditsales-form.njk" import creditSalesForm %}
+
+{% extends 'layout.html' %}
+
+{% set pageHeading = "Check your file before you upload it" %}
+
+{% block content %}
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <h1 class="govuk-heading-xl">{{ pageHeading }}</h1>
+      <h2 class="govuk-heading-m">File added</h2>
+      <p class="gem-c-lead-paragraph">
+        <span style="text-decoration: underline;">{{ biodiversityMetricsData.fileName}} </span>{{ biodiversityMetricsData.fileSize }} MB
+      </p>
+      {% call creditSalesForm({
+        action: "confirm-upload",
+        name: "confirm-upload-form",
+        id: "confirm-upload"
+      }) -%}
+      <div class="govuk-form-group">
+          {{
+            govukRadios({
+              name: "isCorrectFile",
+              fieldset: {
+                legend: {
+                  text: "Is this the correct file?",
+                  isPageHeading: true,
+                  classes: "govuk-fieldset__legend--l"
+                }
+              },
+              items: [
+                {
+                  value: "yes",
+                  text: "Yes"
+                },
+                {
+                  value: "No",
+                  text: "No, shoose a different file"
+                }
+              ]
+            })
+          }}
+          {{
+            govukButton({
+              text: "Continue",
+              type: "submit",
+              classes: "govuk-!-margin-top-2 govuk-!-margin-bottom-8"
+            })
+          }}
+      </div>
+      {%- endcall %}
+    </div>
+  </div>
+{% endblock %}

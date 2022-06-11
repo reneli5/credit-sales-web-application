@@ -1,0 +1,50 @@
+{% from "defra-creditsales-form.njk" import creditSalesForm %}
+
+{% extends 'layout.html' %}
+
+{% set pageHeading = "Sign in" %}
+
+{% block content %}
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      <h1 class="govuk-heading-xl">{{ pageHeading }}</h1>
+      {% call creditSalesForm({
+        action: "login",
+        name: "loginForm",
+        id: "loginForm"
+      }) -%}
+
+
+      <div class="govuk-form-group">
+        {{ govukInput({
+            label: {
+              text: "Email address",
+              classes: "govuk-label--m",
+              isPageHeading: true
+            },
+            id: "email-address",
+            name: "emailAddress"
+          }) }}
+
+          {{ govukInput({
+            label: {
+              text: "Password",
+              classes: "govuk-label--m",
+              isPageHeading: true
+            },
+            id: "password",
+            name: "password",
+            type: "password"
+          }) }}
+
+          {{ govukButton({
+            text: "Continue",
+            type: "submit",
+            classes: "govuk-!-margin-top-2 govuk-!-margin-bottom-8"
+          }) }}
+
+      </div>
+      {%- endcall %}
+    </div>
+  </div>
+{% endblock %}

@@ -1,0 +1,19 @@
+{% macro creditSalesForm(params) %}
+
+    {% set attributes = {
+        action: params.action | default(""),
+        method: params.method | default("POST"),
+        name: params.name,
+        autocomplete: "off",
+        novalidate: "true",
+        spellcheck: params.spellcheck | default("false")
+        ] %}
+
+    {% if params.type == 'multiplart' %}
+        {% set enctype = 'enctype=multipart/form-data' %}
+    {% endif %}
+
+    <form {%- for attribute, value in attributes %} {{ attribute }}="{{ value }}"{% endfor -%} {{ enctype }}>
+        {{- params.content if params.content }}{{- caller() if caller }}
+    </form>
+{% endmacro %}

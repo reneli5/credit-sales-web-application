@@ -1,0 +1,5 @@
+#!/bin/sh
+
+mkdir ../public
+mkdir ../public/static
+cp client/static/* ../public/static

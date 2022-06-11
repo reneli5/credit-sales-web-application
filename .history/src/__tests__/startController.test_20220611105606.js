@@ -49,14 +49,14 @@ describe('Controller tests', () => {
 		expect(data.statusCode).toBe(302);
 	});
 	
-	// it('test public resource controller get robot text', async function () {
-	// 	const options = {
-	// 		method: 'GET',
-	// 		url: '/public/arobots.txt'
-	// 	};
-	// 	const data = await server.inject(options);
-	// 	expect(data.statusCode).toBe(204);
-	// });
+	it('test public resource controller get robot text', async function () {
+		const options = {
+			method: 'GET',
+			url: '/public/arobots.txt'
+		};
+		const data = await server.inject(options);
+		expect(data.statusCode).toBe(204);
+	});
 	
 	it('test public resource controller get stylesheet', async function () {
 		const options = {

@@ -47,9 +47,8 @@ jobs:
           creds: ${{ secrets.AZURE_CREDENTIALS }}
       -
         name: Build and push
-        uses: docker/build-push-action@v3
-        with:
-          push: true
-          tags: creditsalesregistry.azurecr.io/credit-sales-web-application:latest
+        run: |
+          docker build . -t creditsalesregistry.azurecr.io/credit-sales-web-application:latest
+          docker push creditsalesregistry.azurecr.io/credit-sales-web-application:latest
      
   

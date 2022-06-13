@@ -53,6 +53,11 @@ jobs:
           push: true
           tags: creditsalesregistry.azurecr.io/credit-sales-web-application${{github.run_number}}:latest
       -
+        name: Login to azure
+        uses: azure/login@v1
+        with:
+          creds: ${{ secrets.AZURE_CREDENTIALS }}    
+      -
         name: Deploy to azure kubernetes
         uses: azure/aks-set-context@v1
         with:

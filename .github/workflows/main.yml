@@ -12,6 +12,7 @@ on:
 
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
+
 env:
    IMAGE_TAG: ${{ env.GIT_TAG }}
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
@@ -53,6 +54,6 @@ jobs:
         uses: docker/build-push-action@v3
         with:
           push: true
-          tags: creditsalesregistry.azurecr.io/credit-sales-web-application:$IMAGE_TAG
+          tags: creditsalesregistry.azurecr.io/credit-sales-web-application${{ steps.vars.outputs.tag }}:latest
      
   

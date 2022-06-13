@@ -1,0 +1,94 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: redis-cache-server
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: redis-cache-server
+  template:
+    metadata:
+      labels:
+        app: redis-cache-server
+    spec:
+      nodeSelector:
+        "beta.kubernetes.io/os": linux
+      containers:
+        - name: redis-cache-server
+          image: mcr.microsoft.com/oss/bitnami/redis:6.0.8
+          env:
+            - name: ALLOW_EMPTY_PASSWORD
+              value: "yes"
+          ports:
+            - containerPort: 6379
+              name: redis
+      volumes:
+        - name: data
+          emptyDir: { }
+        - name: config
+          configMap:
+            name: redis-configuration
+            items:
+              - key: redis-configuration
+                path: redis.conf
+---
+kind: Deployment
+apiVersion: apps/v1
+metadata:
+  name: credit-sales-deployment
+spec:
+  replicas: 1
+  strategy:
+    type: RollingUpdate
+  selector:
+    matchLabels:
+      app: credit-sales-web-app
+  template:
+    metadata:
+      labels:
+        app: credit-sales-web-app
+    spec:
+      containers:
+        - name: credit-sales-webapp
+          image: proxytechnology/credit-sales-web-application
+          imagePullPolicy: Always
+          resources:
+            limits:
+              cpu: '1'
+              memory: '1Gi'
+            requests:
+              cpu: '1'
+              memory: '1Gi'
+          ports:
+            - containerPort: 3000
+          env:
+            - name: REDIS_HOST
+              value: "redis-cache-server"
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: redis-cache-server
+spec:
+  ports:
+    - protocol: "TCP"
+      port: 6379
+      targetPort: 6379
+  selector:
+    app: redis-cache-server
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: credit-sales-service
+  labels:
+    app: credit-sales-web-app
+spec:
+  selector:
+    app: credit-sales-web-app
+  type: LoadBalancer
+  ports:
+    - protocol: "TCP"
+      port: 80
+      targetPort: 3000

@@ -1,89 +1,89 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1654942067512" clover="3.2.0">
-  <project timestamp="1654942067512" name="All files">
-    <metrics statements="110" coveredstatements="93" conditionals="36" coveredconditionals="27" methods="24" coveredmethods="21" elements="170" coveredelements="141" complexity="0" loc="110" ncloc="110" packages="5" files="18" classes="18"/>
+<coverage generated="1655063323143" clover="3.2.0">
+  <project timestamp="1655063323143" name="All files">
+    <metrics statements="110" coveredstatements="92" conditionals="36" coveredconditionals="26" methods="24" coveredmethods="21" elements="170" coveredelements="139" complexity="0" loc="110" ncloc="110" packages="5" files="18" classes="18"/>
     <package name="credit-sales-web-application">
       <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
       <file name="dirname.cjs" path="/Users/rene/Downloads/defra/credit-sales-web-application/dirname.cjs">
         <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
-        <line num="1" count="2" type="stmt"/>
+        <line num="1" count="1" type="stmt"/>
       </file>
     </package>
     <package name="credit-sales-web-application.src">
       <metrics statements="12" coveredstatements="12" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="2"/>
       <file name="server.js" path="/Users/rene/Downloads/defra/credit-sales-web-application/src/server.js">
         <metrics statements="12" coveredstatements="12" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="2"/>
-        <line num="12" count="2" type="stmt"/>
-        <line num="14" count="11" type="stmt"/>
-        <line num="27" count="11" type="stmt"/>
-        <line num="30" count="2" type="stmt"/>
-        <line num="32" count="11" type="stmt"/>
-        <line num="33" count="11" type="stmt"/>
-        <line num="34" count="11" type="stmt"/>
-        <line num="35" count="11" type="stmt"/>
-        <line num="36" count="11" type="stmt"/>
-        <line num="37" count="11" type="stmt"/>
-        <line num="38" count="11" type="stmt"/>
-        <line num="40" count="11" type="stmt"/>
+        <line num="12" count="1" type="stmt"/>
+        <line num="14" count="8" type="stmt"/>
+        <line num="27" count="8" type="stmt"/>
+        <line num="30" count="1" type="stmt"/>
+        <line num="32" count="8" type="stmt"/>
+        <line num="33" count="8" type="stmt"/>
+        <line num="34" count="8" type="stmt"/>
+        <line num="35" count="8" type="stmt"/>
+        <line num="36" count="8" type="stmt"/>
+        <line num="37" count="8" type="stmt"/>
+        <line num="38" count="8" type="stmt"/>
+        <line num="40" count="8" type="stmt"/>
       </file>
     </package>
     <package name="credit-sales-web-application.src.plugins">
-      <metrics statements="21" coveredstatements="21" conditionals="6" coveredconditionals="5" methods="6" coveredmethods="6"/>
+      <metrics statements="21" coveredstatements="20" conditionals="6" coveredconditionals="4" methods="6" coveredmethods="6"/>
       <file name="cache.js" path="/Users/rene/Downloads/defra/credit-sales-web-application/src/plugins/cache.js">
         <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
-        <line num="4" count="2" type="stmt"/>
+        <line num="4" count="1" type="stmt"/>
       </file>
       <file name="error-pages.js" path="/Users/rene/Downloads/defra/credit-sales-web-application/src/plugins/error-pages.js">
-        <metrics statements="10" coveredstatements="10" conditionals="6" coveredconditionals="5" methods="2" coveredmethods="2"/>
-        <line num="1" count="2" type="stmt"/>
-        <line num="4" count="11" type="stmt"/>
-        <line num="5" count="11" type="stmt"/>
-        <line num="7" count="11" type="cond" truecount="2" falsecount="0"/>
-        <line num="10" count="4" type="stmt"/>
-        <line num="14" count="4" type="cond" truecount="2" falsecount="0"/>
-        <line num="15" count="3" type="stmt"/>
+        <metrics statements="10" coveredstatements="9" conditionals="6" coveredconditionals="4" methods="2" coveredmethods="2"/>
+        <line num="1" count="1" type="stmt"/>
+        <line num="4" count="8" type="stmt"/>
+        <line num="5" count="8" type="stmt"/>
+        <line num="7" count="8" type="cond" truecount="2" falsecount="0"/>
+        <line num="10" count="1" type="stmt"/>
+        <line num="14" count="1" type="cond" truecount="1" falsecount="1"/>
+        <line num="15" count="0" type="stmt"/>
         <line num="19" count="1" type="stmt"/>
         <line num="26" count="1" type="stmt"/>
         <line num="28" count="7" type="stmt"/>
       </file>
       <file name="logging.js" path="/Users/rene/Downloads/defra/credit-sales-web-application/src/plugins/logging.js">
         <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
-        <line num="3" count="2" type="stmt"/>
+        <line num="3" count="1" type="stmt"/>
       </file>
       <file name="router.js" path="/Users/rene/Downloads/defra/credit-sales-web-application/src/plugins/router.js">
         <metrics statements="3" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
-        <line num="9" count="2" type="stmt"/>
-        <line num="18" count="2" type="stmt"/>
-        <line num="20" count="11" type="stmt"/>
+        <line num="9" count="1" type="stmt"/>
+        <line num="18" count="1" type="stmt"/>
+        <line num="20" count="8" type="stmt"/>
       </file>
       <file name="session.js" path="/Users/rene/Downloads/defra/credit-sales-web-application/src/plugins/session.js">
         <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
-        <line num="4" count="2" type="stmt"/>
+        <line num="4" count="1" type="stmt"/>
       </file>
       <file name="views.js" path="/Users/rene/Downloads/defra/credit-sales-web-application/src/plugins/views.js">
         <metrics statements="5" coveredstatements="5" conditionals="0" coveredconditionals="0" methods="3" coveredmethods="3"/>
-        <line num="6" count="2" type="stmt"/>
-        <line num="12" count="8" type="stmt"/>
-        <line num="14" count="8" type="stmt"/>
-        <line num="17" count="8" type="stmt"/>
-        <line num="22" count="8" type="stmt"/>
+        <line num="6" count="1" type="stmt"/>
+        <line num="12" count="5" type="stmt"/>
+        <line num="14" count="5" type="stmt"/>
+        <line num="17" count="5" type="stmt"/>
+        <line num="22" count="5" type="stmt"/>
       </file>
     </package>
     <package name="credit-sales-web-application.src.routes">
       <metrics statements="26" coveredstatements="22" conditionals="2" coveredconditionals="1" methods="8" coveredmethods="7"/>
       <file name="aboutController.js" path="/Users/rene/Downloads/defra/credit-sales-web-application/src/routes/aboutController.js">
         <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
-        <line num="1" count="2" type="stmt"/>
+        <line num="1" count="1" type="stmt"/>
       </file>
       <file name="authenticationController.js" path="/Users/rene/Downloads/defra/credit-sales-web-application/src/routes/authenticationController.js">
         <metrics statements="3" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
-        <line num="1" count="2" type="stmt"/>
+        <line num="1" count="1" type="stmt"/>
         <line num="13" count="1" type="stmt"/>
         <line num="14" count="1" type="stmt"/>
       </file>
       <file name="confirmuploadController.js" path="/Users/rene/Downloads/defra/credit-sales-web-application/src/routes/confirmuploadController.js">
         <metrics statements="9" coveredstatements="5" conditionals="2" coveredconditionals="1" methods="3" coveredmethods="2"/>
-        <line num="5" count="2" type="stmt"/>
+        <line num="5" count="1" type="stmt"/>
         <line num="10" count="1" type="stmt"/>
         <line num="19" count="1" type="stmt"/>
         <line num="20" count="1" type="cond" truecount="1" falsecount="1"/>
@@ -95,12 +95,12 @@
       </file>
       <file name="errorController.js" path="/Users/rene/Downloads/defra/credit-sales-web-application/src/routes/errorController.js">
         <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
-        <line num="1" count="2" type="stmt"/>
+        <line num="1" count="1" type="stmt"/>
         <line num="5" count="1" type="stmt"/>
       </file>
       <file name="fileuploadController.js" path="/Users/rene/Downloads/defra/credit-sales-web-application/src/routes/fileuploadController.js">
         <metrics statements="8" coveredstatements="8" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="2"/>
-        <line num="5" count="2" type="stmt"/>
+        <line num="5" count="1" type="stmt"/>
         <line num="10" count="1" type="stmt"/>
         <line num="19" count="1" type="stmt"/>
         <line num="20" count="1" type="stmt"/>
@@ -111,11 +111,11 @@
       </file>
       <file name="publicController.js" path="/Users/rene/Downloads/defra/credit-sales-web-application/src/routes/publicController.js">
         <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
-        <line num="3" count="2" type="stmt"/>
+        <line num="3" count="1" type="stmt"/>
       </file>
       <file name="startController.js" path="/Users/rene/Downloads/defra/credit-sales-web-application/src/routes/startController.js">
         <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
-        <line num="1" count="2" type="stmt"/>
+        <line num="1" count="1" type="stmt"/>
         <line num="5" count="1" type="stmt"/>
       </file>
     </package>
@@ -123,10 +123,10 @@
       <metrics statements="50" coveredstatements="37" conditionals="28" coveredconditionals="21" methods="8" coveredmethods="6"/>
       <file name="azurequeuemessagesender.js" path="/Users/rene/Downloads/defra/credit-sales-web-application/src/utils/azurequeuemessagesender.js">
         <metrics statements="11" coveredstatements="4" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
-        <line num="2" count="3" type="stmt"/>
-        <line num="3" count="3" type="stmt"/>
-        <line num="6" count="3" type="stmt"/>
-        <line num="8" count="3" type="stmt"/>
+        <line num="2" count="2" type="stmt"/>
+        <line num="3" count="2" type="stmt"/>
+        <line num="6" count="2" type="stmt"/>
+        <line num="8" count="2" type="stmt"/>
         <line num="11" count="0" type="stmt"/>
         <line num="13" count="0" type="stmt"/>
         <line num="14" count="0" type="stmt"/>
@@ -137,9 +137,9 @@
       </file>
       <file name="biodiversityExtractor.js" path="/Users/rene/Downloads/defra/credit-sales-web-application/src/utils/biodiversityExtractor.js">
         <metrics statements="32" coveredstatements="26" conditionals="14" coveredconditionals="10" methods="7" coveredmethods="6"/>
-        <line num="2" count="2" type="stmt"/>
-        <line num="3" count="2" type="stmt"/>
-        <line num="5" count="2" type="stmt"/>
+        <line num="2" count="1" type="stmt"/>
+        <line num="3" count="1" type="stmt"/>
+        <line num="5" count="1" type="stmt"/>
         <line num="6" count="1" type="stmt"/>
         <line num="7" count="1" type="stmt"/>
         <line num="8" count="1" type="cond" truecount="1" falsecount="1"/>
@@ -172,13 +172,13 @@
       </file>
       <file name="config.js" path="/Users/rene/Downloads/defra/credit-sales-web-application/src/utils/config.js">
         <metrics statements="7" coveredstatements="7" conditionals="14" coveredconditionals="11" methods="0" coveredmethods="0"/>
-        <line num="1" count="3" type="cond" truecount="2" falsecount="0"/>
-        <line num="2" count="3" type="cond" truecount="1" falsecount="1"/>
-        <line num="3" count="3" type="cond" truecount="1" falsecount="1"/>
-        <line num="4" count="3" type="cond" truecount="1" falsecount="1"/>
-        <line num="5" count="3" type="cond" truecount="2" falsecount="0"/>
-        <line num="6" count="3" type="cond" truecount="2" falsecount="0"/>
-        <line num="7" count="3" type="cond" truecount="2" falsecount="0"/>
+        <line num="1" count="2" type="cond" truecount="2" falsecount="0"/>
+        <line num="2" count="2" type="cond" truecount="1" falsecount="1"/>
+        <line num="3" count="2" type="cond" truecount="1" falsecount="1"/>
+        <line num="4" count="2" type="cond" truecount="1" falsecount="1"/>
+        <line num="5" count="2" type="cond" truecount="2" falsecount="0"/>
+        <line num="6" count="2" type="cond" truecount="2" falsecount="0"/>
+        <line num="7" count="2" type="cond" truecount="2" falsecount="0"/>
       </file>
     </package>
   </project>

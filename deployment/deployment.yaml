@@ -51,7 +51,7 @@ spec:
     spec:
       containers:
         - name: credit-sales-webapp
-          image: proxytechnology/credit-sales-web-application
+          image: creditsalesregistry.azurecr.io/credit-sales-web-application{{github.run_number}}:latest
           imagePullPolicy: Always
           resources:
             limits:

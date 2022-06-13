@@ -51,6 +51,6 @@ jobs:
         uses: docker/build-push-action@v3
         with:
           push: true
-          tags: creditsalesregistry.azurecr.io/credit-sales-web-application${{ steps.vars.outputs.tag }}:latest
+          tags: creditsalesregistry.azurecr.io/credit-sales-web-application${{github.run_number}}:latest
      
   

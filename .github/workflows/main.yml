@@ -40,7 +40,7 @@ jobs:
         name: Set up Docker Buildx
         uses: docker/setup-buildx-action@v2
       -
-        name: Login to DockerHub
+        name: Login to Azure registry
         uses: azure/docker-login@v1
         with:
           login-server: ${{ secrets.AZURE_SERVER }}
@@ -52,5 +52,12 @@ jobs:
         with:
           push: true
           tags: creditsalesregistry.azurecr.io/credit-sales-web-application${{github.run_number}}:latest
+      -
+        name: Deploy to azure kubernetes
+        uses: azure/aks-set-context@v1
+        with:
+          creds: ${{ secrets.AZURE_CREDENTIALS }}
+          cluster-name: ${{ secrets.AZURE_CLUSTER_NAME}}
+          resource-group: ${{ secrets.AZURE_RESOURCE_GROUP }}          
      
   

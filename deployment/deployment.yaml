@@ -51,7 +51,7 @@ spec:
     spec:
       containers:
         - name: credit-sales-webapp
-          image: creditsalesregistry.azurecr.io/credit-sales-web-application{{github.run_number}}:latest
+          image: creditsalesregistry.azurecr.io/credit-sales-web-application23:latest
           imagePullPolicy: Always
           resources:
             limits:
